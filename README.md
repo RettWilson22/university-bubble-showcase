@@ -19,8 +19,6 @@
 
 > **About this repo:** University Bubble is a private product, so its source code lives in a private repository. This page shows what the app does, how it's built, and the engineering problems I solved along the way.
 
----
-
 ## Screenshots
 
 <p align="center">
@@ -29,8 +27,6 @@
   <img src="screenshots/restaurant.jpg" width="200" alt="Restaurant detail" />
   <img src="screenshots/campus.jpg" width="200" alt="Campus housing" />
 </p>
-
----
 
 ## What it does
 
@@ -43,8 +39,6 @@
 | **32 languages** | The full UI is translated, with language packs lazy-loaded to keep startup fast. |
 | **Admin console** | In-app tools to edit restaurant and housing content live, moderate group chats, and ban users. No redeploy needed. |
 | **Guest mode** | Browse dining and campus content without an account. |
-
----
 
 ## Tech stack
 
@@ -68,8 +62,6 @@
      Expo Push / OTA updates        │   • push notification fan-out        │
                                     └──────────────────────────────────────┘
 ```
-
----
 
 ## Engineering highlights
 
@@ -95,14 +87,10 @@
 - 92 unit tests, including a custom guardrail test that scans every screen and fails the build if an admin-editable field is rendered without live-update support. That bug had shipped three times before the test existed.
 - Ran multi-pass code audits that caught and fixed real issues before release (for example, poll voting that was blocked by a database policy, and a member count that never updated).
 
----
-
 ## What I learned
 - **Design the security in the database.** Client checks are for user experience. Triggers and RLS are what actually protect the data.
 - **Realtime systems fail quietly.** A subscription can look connected and still deliver nothing. Version-control *everything* the app depends on, including Supabase dashboard settings.
 - **Write the test for the bug that keeps coming back.** A 50-line guardrail test ended a whole category of regressions.
-
----
 
 <p align="center">
   Built by <b>Rett Wilson</b> · Auburn University · <a href="https://github.com/RettWilson22">@RettWilson22</a>
