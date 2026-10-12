@@ -8,6 +8,14 @@ University Bubble is a campus social app for Auburn University students, with gr
 
 The app is a private product, so its source code lives in a private repository. This page covers what it does, how it's built, and some of the problems I solved along the way.
 
+TestFlight invite and source walkthrough available on request.
+
+A quick walk through the guest view, recorded from the web build.
+
+<p align="center">
+  <img src="docs/guest-walkthrough.gif" width="320" alt="Guest walkthrough of the dining, restaurant, housing and events screens" />
+</p>
+
 ## Screenshots
 
 <p align="center">
